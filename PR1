@@ -1,0 +1,462 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+// Задача 1: Напишите программу, которая принимает от пользователя число и выводит его на экран.
+/*
+#include <stdio.h>
+int main() {
+    int number;
+    printf("Введите число: ");
+    scanf("%d", &number);
+    printf("Вы ввели: %d\n", number);
+    return 0;
+}
+*/
+
+// Задача 2: Напишите программу, которая принимает от пользователя два числа и выводит на экран их сумму, разность, произведение и частное.
+/*
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Введите первое число: ");
+    scanf("%d", &a);
+    printf("Введите второе число: ");
+    scanf("%d", &b);
+    
+    printf("Сумма: %d + %d = %d\n", a, b, a + b);
+    printf("Разность: %d - %d = %d\n", a, b, a - b);
+    printf("Произведение: %d * %d = %d\n", a, b, a * b);
+    if (b != 0) {
+        printf("Частное: %d / %d = %.2f\n", a, b, (double)a / b);
+    } else {
+        printf("Деление на ноль невозможно!\n");
+    }
+    return 0;
+}
+*/
+
+// Задача 3: Напишите программу, которая принимает от пользователя три числа и выводит на экран их среднее арифметическое.
+/*
+#include <stdio.h>
+int main() {
+    int a, b, c;
+    double average;
+    printf("Введите три числа: ");
+    scanf("%d %d %d", &a, &b, &c);
+    average = (a + b + c) / 3.0;
+    printf("Среднее арифметическое: %.2f\n", average);
+    return 0;
+}
+*/
+
+// Задача 4: Напишите программу, которая принимает от пользователя его имя и выводит на экран приветствие.
+/*
+#include <stdio.h>
+int main() {
+    char name[50];
+    printf("Введите ваше имя: ");
+    scanf("%s", name);
+    printf("Привет, %s!\n", name);
+    return 0;
+}
+*/
+
+// Задача 5: Напишите программу, которая принимает от пользователя его год рождения и выводит на экран его возраст.
+/*
+#include <stdio.h>
+int main() {
+    int birth_year, current_year = 2023; // Предположим, что текущий год 2023
+    printf("Введите ваш год рождения: ");
+    scanf("%d", &birth_year);
+    printf("Ваш возраст: %d лет\n", current_year - birth_year);
+    return 0;
+}
+*/
+
+// Задача 7: Напишите программу, которая принимает от пользователя число и выводит на экран, является ли оно четным или нечетным.
+/*
+#include <stdio.h>
+int main() {
+    int number;
+    printf("Введите число: ");
+    scanf("%d", &number);
+    if (number % 2 == 0) {
+        printf("Число %d - четное.\n", number);
+    } else {
+        printf("Число %d - нечетное.\n", number);
+    }
+    return 0;
+}
+*/
+
+// Задача 8: Напишите программу, которая принимает от пользователя число и выводит на экран, является ли оно положительным или отрицательным.
+/*
+#include <stdio.h>
+int main() {
+    int number;
+    printf("Введите число: ");
+    scanf("%d", &number);
+    if (number > 0) {
+        printf("Число %d - положительное.\n", number);
+    } else if (number < 0) {
+        printf("Число %d - отрицательное.\n", number);
+    } else {
+        printf("Число %d - ноль.\n", number);
+    }
+    return 0;
+}
+*/
+
+// Задача 9: Напишите программу, которая принимает от пользователя число и выводит на экран, является ли оно кратным 3.
+/*
+#include <stdio.h>
+int main() {
+    int number;
+    printf("Введите число: ");
+    scanf("%d", &number);
+    if (number % 3 == 0) {
+        printf("Число %d кратно 3.\n", number);
+    } else {
+        printf("Число %d не кратно 3.\n", number);
+    }
+    return 0;
+}
+*/
+
+// Задача 10: Напишите программу, которая принимает от пользователя два числа и выводит на экран большее из них.
+/*
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Введите два числа: ");
+    scanf("%d %d", &a, &b);
+    if (a > b) {
+        printf("Большее число: %d\n", a);
+    } else if (b > a) {
+        printf("Большее число: %d\n", b);
+    } else {
+        printf("Оба числа равны: %d\n", a);
+    }
+    return 0;
+}
+*/
+
+// Задача 11: Напишите программу, которая принимает от пользователя два числа и выводит на экран, равны ли они.
+/*
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Введите два числа: ");
+    scanf("%d %d", &a, &b);
+    if (a == b) {
+        printf("Числа равны.\n");
+    } else {
+        printf("Числа не равны.\n");
+    }
+    return 0;
+}
+*/
+
+// Задача 12 (циклы): Напишите программу, которая выводит на экран числа от 1 до 10.
+/*
+#include <stdio.h>
+int main() {
+    int i;
+    for (i = 1; i <= 10; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+// Задача 13 (циклы): Напишите программу, которая выводит на экран таблицу умножения на 5.
+/*
+#include <stdio.h>
+int main() {
+    int i;
+    printf("Таблица умножения на 5:\n");
+    for (i = 1; i <= 10; i++) {
+        printf("5 * %d = %d\n", i, 5 * i);
+    }
+    return 0;
+}
+*/
+
+// Задача 14 (циклы): Напишите программу, которая выводит на экран сумму чисел от 1 до 100.
+/*
+#include <stdio.h>
+int main() {
+    int sum = 0;
+    int i;
+    for (i = 1; i <= 100; i++) {
+        sum += i;
+    }
+    printf("Сумма чисел от 1 до 100: %d\n", sum);
+    return 0;
+}
+*/
+
+// Задача 15 (циклы): Напишите программу, которая выводит на экран все числа от 1 до 100, кратные 3 или 5.
+/*
+#include <stdio.h>
+int main() {
+    int i;
+    printf("Числа от 1 до 100, кратные 3 или 5:\n");
+    for (i = 1; i <= 100; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+// Задача 16 (циклы): Напишите программу, которая запрашивает у пользователя число и выводит на экран все его делители.
+/*
+#include <stdio.h>
+int main() {
+    int number, i;
+    printf("Введите число: ");
+    scanf("%d", &number);
+    printf("Делители числа %d: ", number);
+    for (i = 1; i <= number; i++) {
+        if (number % i == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+// Задача 17 (массивы): Напишите программу, которая создает массив из 10 чисел и выводит на экран все его элементы.
+/*
+#include <stdio.h>
+int main() {
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int i;
+    printf("Элементы массива: ");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+// Задача 18 (массивы): Напишите программу, которая заполняет массив из 10 чисел случайными значениями и выводит на экран все его элементы.
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main() {
+    int arr[10];
+    int i;
+    srand(time(NULL)); // Инициализация генератора случайных чисел
+    printf("Случайные элементы массива: ");
+    for (i = 0; i < 10; i++) {
+        arr[i] = rand() % 100; // Случайные числа от 0 до 99
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+// Задача 19 (массивы): Напишите программу, которая заполняет массив из 10 чисел, принимаемых от пользователя, и выводит на экран все его элементы.
+/*
+#include <stdio.h>
+int main() {
+    int arr[10];
+    int i;
+    printf("Введите 10 чисел:\n");
+    for (i = 0; i < 10; i++) {
+        printf("Число %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+    printf("Введенные числа: ");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+// Задача 20 (массивы): Напишите программу, которая создает массив из 10 чисел и выводит на экран его сумму.
+/*
+#include <stdio.h>
+int main() {
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int sum = 0;
+    int i;
+    for (i = 0; i < 10; i++) {
+        sum += arr[i];
+    }
+    printf("Сумма элементов массива: %d\n", sum);
+    return 0;
+}
+*/
+
+// Задача 21 (массивы): Напишите программу, которая создает два массива из 10 чисел, затем складывает их и выводит результат на экран.
+/*
+#include <stdio.h>
+int main() {
+    int arr1[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int arr2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    int result[10];
+    int i;
+    printf("Массив 1: ");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", arr1[i]);
+    }
+    printf("\nМассив 2: ");
+    for (i = 0; i < 10; i++) {
+        printf("%d ", arr2[i]);
+    }
+    printf("\nСумма: ");
+    for (i = 0; i < 10; i++) {
+        result[i] = arr1[i] + arr2[i];
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+    return 0;
+}
+*/
+
+// Задача 22 (функции): Напишите функцию, которая принимает от пользователя число и выводит на экран его факториал.
+/*
+#include <stdio.h>
+
+long long factorial(int n) {
+    if (n == 0 || n == 1) return 1;
+    long long result = 1;
+    for (int i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+int main() {
+    int number;
+    printf("Введите число для вычисления факториала: ");
+    scanf("%d", &number);
+    if (number < 0) {
+        printf("Факториал отрицательного числа не определен.\n");
+    } else {
+        printf("Факториал %d = %lld\n", number, factorial(number));
+    }
+    return 0;
+}
+*/
+
+// Задача 23 (функции): Напишите функцию, которая принимает от пользователя число и проверяет, является ли оно простым.
+/*
+#include <stdio.h>
+#include <math.h>
+
+int is_prime(int n) {
+    if (n <= 1) return 0;
+    if (n <= 3) return 1;
+    if (n % 2 == 0 || n % 3 == 0) return 0;
+    for (int i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main() {
+    int number;
+    printf("Введите число для проверки на простоту: ");
+    scanf("%d", &number);
+    if (is_prime(number)) {
+        printf("%d - простое число.\n", number);
+    } else {
+        printf("%d - не простое число.\n", number);
+    }
+    return 0;
+}
+*/
+
+// Задача 24 (функции): Напишите функцию, которая принимает от пользователя число и выводит на экран все его делители.
+/*
+#include <stdio.h>
+
+void print_divisors(int n) {
+    printf("Делители числа %d: ", n);
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    int number;
+    printf("Введите число: ");
+    scanf("%d", &number);
+    print_divisors(number);
+    return 0;
+}
+*/
+
+// Задача 25 (функции): Напишите функцию, которая принимает от пользователя два числа и выводит на экран все числа между ними.
+/*
+#include <stdio.h>
+
+void print_numbers_between(int a, int b) {
+    int start = (a < b) ? a : b;
+    int end = (a > b) ? a : b;
+    printf("Числа между %d и %d: ", start, end);
+    for (int i = start + 1; i < end; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+}
+
+int main() {
+    int num1, num2;
+    printf("Введите два числа: ");
+    scanf("%d %d", &num1, &num2);
+    print_numbers_between(num1, num2);
+    return 0;
+}
+*/
+
+// Задача 26 (функции): Напишите функцию, которая принимает от пользователя два числа и проверяет, являются ли они дружественными
+/*
+#include <stdio.h>
+
+int sum_of_divisors(int n) {
+    int sum = 0;
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+void check_amicable_numbers(int a, int b) {
+    if (sum_of_divisors(a) == b && sum_of_divisors(b) == a) {
+        printf("%d и %d - дружественные числа.\n", a, b);
+    } else {
+        printf("%d и %d - не дружественные числа.\n", a, b);
+    }
+}
+
+int main() {
+    int num1, num2;
+    printf("Введите два числа: ");
+    scanf("%d %d", &num1, &num2);
+    check_amicable_numbers(num1, num2);
+    return 0;
+}
+*/
